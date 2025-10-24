@@ -1,3 +1,7 @@
+config-file = ./alias
+config-file = ./style
+config-file = ./function
+
 # This is the configuration file for Ghostty.
 #
 # This template file has been automatically created at the following

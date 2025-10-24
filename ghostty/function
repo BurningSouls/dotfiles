@@ -1,0 +1,9 @@
+# Startup
+command = nu
+# launch starship
+
+clipboard-read = allow
+clipboard-write = allow
+clipboard-paste-protection = true
+
+undo-timeout = 1m
