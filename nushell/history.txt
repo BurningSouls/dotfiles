@@ -1,0 +1,155 @@
+exit
+reboot
+cd .config/
+git pull
+git stage
+ls
+git add ghostty/
+git add nemo
+git add rofi/
+git add waybar/
+git add hypr/
+git push
+git push --set-upstream dotfiles main
+git pull
+git rebase
+git rebase main
+git stage
+git 
+git backfill
+ls
+git fetch
+ls
+git commit -m "Add configs"
+git push
+git push --set-upstream dotfiles main
+git pull
+git stash
+git pull
+git pull dotfiles main
+ls
+git
+git stash apply
+git add .gitignore
+git add dconf/
+git commit -m "Add .gitignore"
+git pull dotfiles main
+git push dotfiles main
+git pull dotfiles main
+ls
+starhip
+starship
+starship init
+starship init nu
+where starship
+ls
+cl
+ex
+ls
+cl
+cd .cache/
+ls
+cd ..
+cd .config/
+cd ..
+nv .cache/starship/init.nu
+cl
+exit
+nu
+nv .cache/starship/init.nu
+cl
+exit
+nu
+ls
+rm -rf `C:\Users\Silas Zielke\.config\.cache\starship/`
+rm -rf `C:\Users\Silas Zielke\.config\.cache\starship\init.nu`
+ls
+cd .config/
+ls
+cl
+exit
+nu
+nv .cache/starship/init.nu
+nv ~/.cache/starship/init.nu
+cl
+exit
+nu
+exit
+ls
+rm -rf `C:\Users\Silas Zielke\.config\.cache\starship\init.nu`
+rm -rf `C:\Users\Silas Zielke\.config\.cache\starship/`
+ls
+reboot
+cl
+\
+cl
+ll
+rm `C:\Users\Silas Zielke\.config\.cache\starship/`
+ls
+rm `C:\Users\Silas Zielke\.config\.cache\starship\init.nu`
+ls
+ls .cache/
+ls .cache/starship/
+nv .cache/starship/init.nu
+starship init nu
+starship explain
+starship module config --path<\n>
+starship module config --path
+starship module config --path .config/starship.toml
+starship module --list
+starship module --list | grep nu
+source .config/nushell/config.nu
+starship explain
+echo $env.STARSHIP_CONFIG
+unset-env $env.STARSHIP_CONFIG
+let-env $env.STARSHIP_CONFIG = ~/.config/starship/starship.toml
+let-env STARSHIP_CONFIG = ~/.config/starship/starship.toml
+let-env STARSHIP_CONFIG = "~/.config/starship/starship.toml"
+let-env $env.STARSHIP_CONFIG = "~/.config/starship/starship.toml"
+$env.STARSHIP_CONFIG = "~/.config/starship/starship.toml"
+cl
+exit
+nu
+echo $env.STARSHIP_CONFIG
+cd .config/
+mkdir starship
+mv starship.toml starship/starship.toml
+ls
+ls starship/
+cd starship/
+ls
+cl
+exit
+nu
+exit
+echo $env.STARSHIP_CONFIG
+cl
+exit
+nu
+exit
+echo $env.STARSHIP_CONFIG
+nu -c '$nu.env-path'
+cd .config/
+cl
+exit
+nu
+nv
+ls
+cd /
+ls
+cd
+ls
+rm ~
+rm ./~
+ls ~
+ls ./~
+rm -rf ./~
+ls
+rm -rf `C:\Users\Silas Zielke\.config\.cache\starship/`
+rm -rf `C:\Users\Silas Zielke\.config\.cache\starship\init.nu`
+ls
+la
+l
+cd .config/
+ls
+l
