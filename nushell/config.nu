@@ -901,6 +901,9 @@ alias nv = nvim
 # alias hms = /nix/store/6kc5srg83nkyg21am089xx7pvq44kn2c-home-manager/bin/home-manager switch
 alias as = aerospace
 alias asr = atuin scripts run
+alias shut = shutdown now
+alias re = reboot
+alias spot = spotify_player
 
 def ff [] {
     aerospace list-windows --all | fzf --bind 'enter:execute(bash -c "aerospace focus --window-id {1}")+abort'
