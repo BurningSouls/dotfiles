@@ -1,3 +1,4 @@
+#env.nu
 # Nushell Environment Config File
 #
 # version = "0.95.0"
@@ -20,7 +21,7 @@ def --env home [] {
 }
 
 def create_left_prompt [] {
-    let dir = match (do { $env.PWD | path relative-to $nu.home-path }) {
+    let dir = match (do { $env.PWD | path relative-to $nu.home-dir }) {
         null => $env.PWD
         '' => '~'
         $relative_pwd => ([~ $relative_pwd] | path join)
@@ -121,12 +122,12 @@ path add /opt/homebrew/opt/ruby/bin:$PATH
 # To load from a custom file you can use:
 # source ($nu.default-config-dir | path join 'custom.nu')
 
-mkdir '/home/silzie14/.cache/starship'
-starship init nu | save -f '/home/silzie14/.cache/starship/init.nu'
+mkdir 'C:\Users\silzie14/.cache/starship'
+starship init nu | save -f 'C:\Users\silzie14/.cache/starship/init.nu'
 
 #zoxide init nushell | save -f ~/.zoxide.nu
 
-$env.STARSHIP_CONFIG = '/home/silzie14/.config/starship/starship.toml'
+$env.STARSHIP_CONFIG = 'C:\Users\silzie14/.config/starship/starship.toml'
 
 #$env.NIX_CONF_DIR = /Users/omerxx/.config/nix
 #$env.CARAPACE_BRIDGES = 'zsh,fish,bash,inshellisense' # optional

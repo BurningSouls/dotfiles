@@ -1,3 +1,4 @@
+#config.nu
 # Nushell Config File
 #
 # version = "0.95.0"
@@ -905,10 +906,6 @@ alias shut = shutdown now
 alias re = reboot
 alias spot = spotify_player
 
-def ff [] {
-    aerospace list-windows --all | fzf --bind 'enter:execute(bash -c "aerospace focus --window-id {1}")+abort'
-}
-
 # Git
 alias gc = git commit -m
 alias gca = git commit -a -m
@@ -942,20 +939,6 @@ alias ke = kubectl exec -it
 
 source '~/.config/nushell/env.nu'
 source '~/.config/nushell/catppuccin_mocha.nu'
-#source ~/.zoxide.nu
-#source ~/.cache/carapace/init.nu
-#source ~/.local/share/atuin/init.nu
-use '~/.cache/starship/init.nu'
+use 'C:\Users\silzie14/.cache/starship/init.nu'
 
-#let ruby_ver = "3.4.0"
-#let gem_home = ($nu.home-path | path join ".gem" "ruby" $ruby_ver)
-#let gem_bin = ($gem_home | path join "bin")
-
-# Set GEM paths
-#$env.GEM_HOME = $gem_home
-#$env.GEM_PATH = $gem_home
-
-# Add gem bin to PATH if it exists
-#if ($gem_bin | path exists) {
-#  $env.PATH = ($env.PATH | prepend $gem_bin)
-#}
+$env.PROMPT_COMMAND_RIGHT = {|| create_right_prompt }
