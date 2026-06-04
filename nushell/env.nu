@@ -2,6 +2,23 @@
 #
 # version = "0.95.0"
 
+$env.EDITOR = 'nvim'
+
+def --env cll [] {
+	clear
+	ls
+}
+def --env mkcd [directory: path]: nothing -> nothing {
+    mkdir $directory
+    cd $directory
+}
+
+def --env home [] {
+    cd ~/
+    clear
+    ls
+}
+
 def create_left_prompt [] {
     let dir = match (do { $env.PWD | path relative-to $nu.home-path }) {
         null => $env.PWD
@@ -104,12 +121,12 @@ path add /opt/homebrew/opt/ruby/bin:$PATH
 # To load from a custom file you can use:
 # source ($nu.default-config-dir | path join 'custom.nu')
 
-mkdir '/home/silas/.cache/starship'
-starship init nu | save -f '/home/silas/.cache/starship/init.nu'
+mkdir '/home/silzie14/.cache/starship'
+starship init nu | save -f '/home/silzie14/.cache/starship/init.nu'
 
 #zoxide init nushell | save -f ~/.zoxide.nu
 
-$env.STARSHIP_CONFIG = '/home/silas/.config/starship/starship.toml'
+$env.STARSHIP_CONFIG = '/home/silzie14/.config/starship/starship.toml'
 
 #$env.NIX_CONF_DIR = /Users/omerxx/.config/nix
 #$env.CARAPACE_BRIDGES = 'zsh,fish,bash,inshellisense' # optional
