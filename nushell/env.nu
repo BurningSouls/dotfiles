@@ -5,6 +5,8 @@
 
 $env.EDITOR = 'nvim'
 
+let home = ($env.HOMEDRIVE + $env.HOMEPATH)
+
 def --env cll [] {
 	clear
 	ls
@@ -18,6 +20,22 @@ def --env home [] {
     cd ~/
     clear
     ls
+}
+
+def --env docs [] {
+    cd \\ADM-Filserver.skoleforeningen.intern\RedirectedWin7\silzie14\Documents
+}
+
+def --env desk [] {
+    cd \\ADM-Filserver.skoleforeningen.intern\RedirectedWin7\silzie14\Desktop
+}
+
+def --env down [] {
+    cd ($home | path join "Downloads")
+}
+
+def --env conf [] {
+    cd ($home | path join ".config")
 }
 
 def create_left_prompt [] {
@@ -114,22 +132,14 @@ use std "path add"
 # path add ($env.CARGO_HOME | path join "bin")
 # path add ($env.HOME | path join ".local" "bin")
 # $env.PATH = ($env.PATH | uniq)
-path add /opt/homebrew/bin
-path add /run/current-system/sw/bin
-path add /Users/omerxx/.local/bin
-path add /opt/homebrew/opt/ruby/bin:$PATH
+if not (($home | path join "bin") | path exists) {
+    mkdir ($home | path join "bin")
+}
+path add ($home | path join "bin")
 
 # To load from a custom file you can use:
 # source ($nu.default-config-dir | path join 'custom.nu')
 
 mkdir 'C:\Users\silzie14/.cache/starship'
 starship init nu | save -f 'C:\Users\silzie14/.cache/starship/init.nu'
-
-#zoxide init nushell | save -f ~/.zoxide.nu
-
 $env.STARSHIP_CONFIG = 'C:\Users\silzie14/.config/starship/starship.toml'
-
-#$env.NIX_CONF_DIR = /Users/omerxx/.config/nix
-#$env.CARAPACE_BRIDGES = 'zsh,fish,bash,inshellisense' # optional
-#mkdir ~/.cache/carapace
-#carapace _carapace nushell | save --force ~/.cache/carapace/init.nu
