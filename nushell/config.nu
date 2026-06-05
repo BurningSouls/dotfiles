@@ -905,6 +905,7 @@ alias asr = atuin scripts run
 alias shut = shutdown now
 alias re = reboot
 alias spot = spotify_player
+alias dl = down
 
 # Git
 alias gc = git commit -m
