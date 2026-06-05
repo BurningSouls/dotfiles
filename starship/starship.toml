@@ -6,12 +6,25 @@ palette = "catppuccin_mocha"
 right_format = "$all"
 command_timeout = 1000
 
+[directory]
+style = "cyan bold"
+#truncate_to_repo = false
+truncation_length = 2
+truncate_to_repo = false
+home_symbol = "~"
+
+[directory.substitutions]
+"silzie14" = "~"
+"\\ADM-Filserver.skoleforeningen.intern" = "🏢ADM-FS"
+"Documents" = "📄 Documents"
+"Desktop" = "🖥 Desktop"
+"Downloads" = "⬇ Downloads"
+".config" = "⚙️ Config"
+
 [character]
 vicmd_symbol = "[N] >>>"
 success_symbol = '[➜](bold green)'
 
-[directory.substitutions]
-#'~/tests/starship-custom' = 'work-project'
 
 [git_branch]
 format =  '[$symbol$branch(:$remote_branch)]($style)'
