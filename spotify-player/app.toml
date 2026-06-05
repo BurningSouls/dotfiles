@@ -11,6 +11,7 @@ playback_metadata_fields = [
     "volume",
     "device",
 ]
+enable_audio_visualization = true
 notify_timeout_in_secs = 0
 tracks_playback_limit = 50
 app_refresh_duration_in_ms = 32
