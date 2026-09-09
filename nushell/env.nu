@@ -121,12 +121,12 @@ path add /opt/homebrew/opt/ruby/bin:$PATH
 # To load from a custom file you can use:
 # source ($nu.default-config-dir | path join 'custom.nu')
 
-mkdir '/home/silzie14/.cache/starship'
-starship init nu | save -f '/home/silzie14/.cache/starship/init.nu'
+mkdir '/home/silas/.cache/starship'
+starship init nu | save -f '/home/silas/.cache/starship/init.nu'
 
 #zoxide init nushell | save -f ~/.zoxide.nu
 
-$env.STARSHIP_CONFIG = '/home/silzie14/.config/starship/starship.toml'
+$env.STARSHIP_CONFIG = '/home/silas/.config/starship/starship.toml'
 
 #$env.NIX_CONF_DIR = /Users/omerxx/.config/nix
 #$env.CARAPACE_BRIDGES = 'zsh,fish,bash,inshellisense' # optional
