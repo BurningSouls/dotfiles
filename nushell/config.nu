@@ -372,17 +372,17 @@ $env.config = {
 
     keybindings: [
         {
-            name: delete_one_word_backward
+            name: delete_one_word_backward_alt_backspace
             modifier: alt
             keycode: backspace
             mode: [emacs, vi_normal, vi_insert]
-            event: {edit: backspaceword}
+            event: { edit: backspaceword }
         }
         {
             name: completion_menu
             modifier: none
             keycode: tab
-            mode: [emacs vi_normal vi_insert]
+            mode: [emacs, vi_normal, vi_insert]
             event: {
                 until: [
                     { send: menu name: completion_menu }
@@ -395,7 +395,7 @@ $env.config = {
             name: ide_completion_menu
             modifier: control
             keycode: char_n
-            mode: [emacs vi_normal vi_insert]
+            mode: [emacs, vi_normal, vi_insert]
             event: {
                 until: [
                     { send: menu name: ide_completion_menu }
@@ -449,7 +449,7 @@ $env.config = {
             modifier: none
             keycode: escape
             mode: [emacs, vi_normal, vi_insert]
-            event: { send: esc }    # NOTE: does not appear to work
+            event: { send: esc }
         }
         {
             name: cancel_command
@@ -486,8 +486,9 @@ $env.config = {
             mode: [emacs, vi_normal, vi_insert]
             event: { send: openeditor }
         }
+
         {
-            name: move_up
+            name: move_up_arrow
             modifier: none
             keycode: up
             mode: [emacs, vi_normal, vi_insert]
@@ -499,7 +500,7 @@ $env.config = {
             }
         }
         {
-            name: move_down
+            name: move_down_arrow
             modifier: none
             keycode: down
             mode: [emacs, vi_normal, vi_insert]
@@ -511,7 +512,7 @@ $env.config = {
             }
         }
         {
-            name: move_left
+            name: move_left_arrow
             modifier: none
             keycode: left
             mode: [emacs, vi_normal, vi_insert]
@@ -523,7 +524,7 @@ $env.config = {
             }
         }
         {
-            name: move_right_or_take_history_hint
+            name: move_right_arrow_or_history_hint
             modifier: none
             keycode: right
             mode: [emacs, vi_normal, vi_insert]
@@ -536,14 +537,14 @@ $env.config = {
             }
         }
         {
-            name: move_one_word_left
+            name: move_one_word_left_ctrl_left
             modifier: control
             keycode: left
             mode: [emacs, vi_normal, vi_insert]
             event: { edit: movewordleft }
         }
         {
-            name: move_one_word_right_or_take_history_hint
+            name: move_one_word_right_ctrl_right
             modifier: control
             keycode: right
             mode: [emacs, vi_normal, vi_insert]
@@ -555,21 +556,21 @@ $env.config = {
             }
         }
         {
-            name: move_to_line_start
+            name: move_to_line_start_home
             modifier: none
             keycode: home
             mode: [emacs, vi_normal, vi_insert]
             event: { edit: movetolinestart }
         }
         {
-            name: move_to_line_start
+            name: move_to_line_start_ctrl_a
             modifier: control
             keycode: char_a
             mode: [emacs, vi_normal, vi_insert]
             event: { edit: movetolinestart }
         }
         {
-            name: move_to_line_end_or_take_history_hint
+            name: move_to_line_end_end
             modifier: none
             keycode: end
             mode: [emacs, vi_normal, vi_insert]
@@ -581,7 +582,7 @@ $env.config = {
             }
         }
         {
-            name: move_to_line_end_or_take_history_hint
+            name: move_to_line_end_ctrl_e
             modifier: control
             keycode: char_e
             mode: [emacs, vi_normal, vi_insert]
@@ -593,21 +594,21 @@ $env.config = {
             }
         }
         {
-            name: move_to_line_start
+            name: move_to_line_start_ctrl_home
             modifier: control
             keycode: home
             mode: [emacs, vi_normal, vi_insert]
             event: { edit: movetolinestart }
         }
         {
-            name: move_to_line_end
+            name: move_to_line_end_ctrl_end
             modifier: control
             keycode: end
             mode: [emacs, vi_normal, vi_insert]
             event: { edit: movetolineend }
         }
         {
-            name: move_up
+            name: move_up_ctrl_p
             modifier: control
             keycode: char_p
             mode: [emacs, vi_normal, vi_insert]
@@ -619,7 +620,7 @@ $env.config = {
             }
         }
         {
-            name: move_down
+            name: move_down_ctrl_t
             modifier: control
             keycode: char_t
             mode: [emacs, vi_normal, vi_insert]
@@ -630,55 +631,57 @@ $env.config = {
                 ]
             }
         }
+
         {
-            name: delete_one_character_backward
+            name: delete_one_character_backward_backspace
             modifier: none
             keycode: backspace
             mode: [emacs, vi_insert]
             event: { edit: backspace }
         }
         {
-            name: delete_one_word_backward
+            name: delete_one_word_backward_ctrl_backspace
             modifier: control
             keycode: backspace
             mode: [emacs, vi_insert]
             event: { edit: backspaceword }
         }
         {
-            name: delete_one_character_forward
+            name: delete_one_character_forward_delete
             modifier: none
             keycode: delete
             mode: [emacs, vi_insert]
             event: { edit: delete }
         }
         {
-            name: delete_one_character_forward
+            name: delete_one_character_forward_ctrl_delete
             modifier: control
             keycode: delete
             mode: [emacs, vi_insert]
             event: { edit: delete }
         }
         {
-            name: delete_one_character_backward
+            name: delete_one_character_backward_ctrl_h
             modifier: control
             keycode: char_h
             mode: [emacs, vi_insert]
             event: { edit: backspace }
         }
         {
-            name: delete_one_word_backward
+            name: delete_one_word_backward_ctrl_w
             modifier: control
             keycode: char_w
             mode: [emacs, vi_insert]
             event: { edit: backspaceword }
         }
         {
-            name: move_left
+            name: move_left_vi_normal_backspace
             modifier: none
             keycode: backspace
             mode: vi_normal
             event: { edit: moveleft }
         }
+
         {
             name: newline_or_run_command
             modifier: none
@@ -687,7 +690,7 @@ $env.config = {
             event: { send: enter }
         }
         {
-            name: move_left
+            name: move_left_ctrl_b
             modifier: control
             keycode: char_b
             mode: emacs
@@ -699,7 +702,7 @@ $env.config = {
             }
         }
         {
-            name: move_right_or_take_history_hint
+            name: move_right_or_history_hint_ctrl_f
             modifier: control
             keycode: char_f
             mode: emacs
@@ -760,15 +763,16 @@ $env.config = {
             mode: emacs
             event: { edit: swapgraphemes }
         }
+
         {
-            name: move_one_word_left
+            name: move_one_word_left_alt_left
             modifier: alt
             keycode: left
             mode: emacs
             event: { edit: movewordleft }
         }
         {
-            name: move_one_word_right_or_take_history_hint
+            name: move_one_word_right_alt_right
             modifier: alt
             keycode: right
             mode: emacs
@@ -780,14 +784,14 @@ $env.config = {
             }
         }
         {
-            name: move_one_word_left
+            name: move_one_word_left_alt_b
             modifier: alt
             keycode: char_b
             mode: emacs
             event: { edit: movewordleft }
         }
         {
-            name: move_one_word_right_or_take_history_hint
+            name: move_one_word_right_alt_f
             modifier: alt
             keycode: char_f
             mode: emacs
@@ -799,21 +803,21 @@ $env.config = {
             }
         }
         {
-            name: delete_one_word_forward
+            name: delete_one_word_forward_alt_delete
             modifier: alt
             keycode: delete
             mode: emacs
             event: { edit: deleteword }
         }
         {
-            name: delete_one_word_backward
+            name: delete_one_word_backward_alt_backspace_emacs
             modifier: alt
             keycode: backspace
             mode: emacs
             event: { edit: backspaceword }
         }
         {
-            name: delete_one_word_backward
+            name: delete_one_word_backward_alt_m
             modifier: alt
             keycode: char_m
             mode: emacs
@@ -847,20 +851,13 @@ $env.config = {
             mode: emacs
             event: { edit: capitalizechar }
         }
-        # The following bindings with `*system` events require that Nushell has
-        # been compiled with the `system-clipboard` feature.
-        # This should be the case for Windows, macOS, and most Linux distributions
-        # Not available for example on Android (termux)
-        # If you want to use the system clipboard for visual selection or to
-        # paste directly, uncomment the respective lines and replace the version
-        # using the internal clipboard.
+
         {
             name: copy_selection
             modifier: control_shift
             keycode: char_c
             mode: emacs
             event: { edit: copyselection }
-            # event: { edit: copyselectionsystem }
         }
         {
             name: cut_selection
@@ -868,15 +865,7 @@ $env.config = {
             keycode: char_x
             mode: emacs
             event: { edit: cutselection }
-            # event: { edit: cutselectionsystem }
         }
-        # {
-        #     name: paste_system
-        #     modifier: control_shift
-        #     keycode: char_v
-        #     mode: emacs
-        #     event: { edit: pastesystem }
-        # }
         {
             name: select_all
             modifier: control_shift
@@ -892,6 +881,7 @@ def --env cx [arg] {
     ls -l
 }
 
+alias p = sudo pacman
 alias l = ls --all
 alias c = clear
 alias cl = clear
@@ -932,7 +922,7 @@ alias ka = kubectl apply -f
 alias kg = kubectl get
 alias kd = kubectl describe
 alias kdel = kubectl delete
-alias kl = kubectl logs
+#alias kl = kubectl logs
 alias kgpo = kubectl get pod
 alias kgd = kubectl get deployments
 alias kc = kubectx

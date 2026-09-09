@@ -20,8 +20,8 @@
         //"network",
 	"group/information",
 	//"power-profiles-daemon",
-        // "cpu",
-        // "memory",
+        "cpu",
+        "memory",
         // "temperature",
         "battery",
         "clock"
