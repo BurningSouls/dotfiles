@@ -5,7 +5,7 @@
 -- Programs
 local terminal = "ghostty"
 local fileManager = "nemo"
-local menu = "rofi -show run"
+local menu = "rofi -show drun"
 local browser = "firefox"
 
 -- Main modifier
@@ -34,7 +34,7 @@ hl.bind(
     mainMod .. " + SHIFT + R",
     hl.dsp.exec_cmd("pkill waybar; waybar")
 )
-
+hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd('grim -g "$(slurp)" - | wl-copy'))
 
 -- ###################
 -- ### WINDOW FOCUS ###
