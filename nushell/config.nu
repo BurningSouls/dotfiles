@@ -882,6 +882,7 @@ def --env cx [arg] {
 }
 
 alias p = sudo pacman
+alias pi = sudo pacman -S -y
 alias l = ls --all
 alias c = clear
 alias cl = clear
@@ -932,7 +933,8 @@ alias ke = kubectl exec -it
 
 source '~/.config/nushell/env.nu'
 source '~/.config/nushell/catppuccin_mocha.nu'
-#source ~/.zoxide.nu
+zoxide init nushell | save -f ~/.cache/zoxide.nu
+source ~/.cache/zoxide.nu
 #source ~/.cache/carapace/init.nu
 #source ~/.local/share/atuin/init.nu
 use '~/.cache/starship/init.nu'
