@@ -2,6 +2,7 @@
 config-file = ./alias
 config-file = ./style
 config-file = ./function
+config-file = ./binds
 
 # This is the configuration file for Ghostty.
 #
