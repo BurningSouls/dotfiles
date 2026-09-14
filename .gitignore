@@ -1,4 +1,24 @@
+# Applications/configs I don't want in my dotfiles repo
+Code/
 Code - OSS/
+GIMP/
+GeoGebra/
+VirtualBox/
+balenaEtcher/
+bitburner/
+kdeconnect/
+nemo/
+obsidian/
+onlyoffice/
+privateinternetaccess/
+qalculate/
+vesktop/
+zen/
+
+# Generated/system state
+dconf/
+pulse/
+session/
+
+# Shell history
 nushell/history.txt
-mozilla
-dconf/user
