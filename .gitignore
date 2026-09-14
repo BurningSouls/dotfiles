@@ -22,3 +22,48 @@ session/
 
 # Shell history
 nushell/history.txt
+
+# Other application/system configs
+.vscode/
+QtProject.conf
+Trolltech.conf
+baloofilerc
+bluedevilglobalrc
+discoverrc
+go/
+gtk-3.0/
+gtk-4.0/
+gtkrc
+gtkrc-2.0
+heroic/
+kdeconnect/
+kactivitymanagerd-statsrc
+kactivitymanagerdrc
+kconf_updaterc
+kded5rc
+kded6rc
+kdedefaults/
+kdeglobals
+kglobalshortcutsrc
+ksmserverrc
+ktimezonedrc
+kwinoutputconfig.json
+kwinrc
+lazygit/
+libaccounts-glib/
+mimeapps.list
+plasma-localerc
+plasma-org.kde.plasma.desktop-appletsrc
+plasma-welcomerc
+plasmarc
+plasmashellrc
+powermanagementprofilesrc
+simple-update-notifier/
+user-dirs.dirs
+user-dirs.locale
+xclicker.conf
+xsettingsd/
+
+# Neovim swap/temporary files
+*.swp
+*.swo
