@@ -15,6 +15,7 @@ qalculate/
 vesktop/
 zen/
 libreoffice/
+ModrinthApp/
 
 # Generated/system state
 dconf/
