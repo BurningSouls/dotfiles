@@ -6,6 +6,7 @@
 local terminal = "ghostty"
 local fileManager = "yazi"
 local menu = "rofi -show drun"
+local menuRun = "rofi -show run"
 local browser = "firefox"
 
 -- Main modifier
@@ -22,6 +23,7 @@ hl.bind(mainMod .. " + M", hl.dsp.exit())
 -- hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + V", hl.dsp.window.float())
 hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd(menu))
+hl.bind(mainMod .. " + SHIFT + SPACE", hl.dsp.exec_cmd(menuRun))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))
 hl.bind(mainMod .. " + F", hl.dsp.exec_cmd(browser))
