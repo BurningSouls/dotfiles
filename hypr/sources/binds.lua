@@ -125,15 +125,15 @@ hl.bind(
 
 -- Scratchpad / special workspace
 
-hl.bind(
-    mainMod .. " + S",
-    hl.dsp.workspace.toggle_special("magic")
-)
+--hl.bind(
+--    mainMod .. " + S",
+--    hl.dsp.workspace.toggle_special("magic")
+--)
 
-hl.bind(
-    mainMod .. " + SHIFT + S",
-    hl.dsp.window.move({ workspace = "special:magic" })
-)
+--hl.bind(
+--    mainMod .. " + SHIFT + S",
+--    hl.dsp.window.move({ workspace = "special:magic" })
+--)
 
 
 -- ###################
