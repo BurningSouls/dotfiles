@@ -194,7 +194,8 @@
                 ""
             ]
         },
-        "on-click": "pavucontrol"
+        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+"on-click-right": "wpctl status | grep -A 10 'Sinks:' | grep -E '[0-9]+\\.' | rofi -dmenu -p \"Select Output:\" | awk '{print $2}' | tr -d '.' | xargs wpctl set-default"
     },
     "custom/benjiplayer": {
         "format": "{}",
